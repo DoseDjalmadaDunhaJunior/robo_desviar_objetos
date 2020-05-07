@@ -29,8 +29,8 @@
 int main(int argc, char **argv) {
   /* necessary to initialize webots stuff */
   wb_robot_init();
-  WbDeviceTag E = wb_robot_get_device("left wheel");
-  WbDeviceTag D = wb_robot_get_device("right_motor");
+  WbDeviceTag E = wb_robot_get_device("left wheel motor");
+  WbDeviceTag D = wb_robot_get_device("right wheel motor");
   
   WbDeviceTag s0 = wb_robot_get_device("ps0");  
   WbDeviceTag s1 = wb_robot_get_device("ps1");  
