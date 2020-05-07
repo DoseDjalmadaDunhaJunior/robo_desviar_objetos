@@ -54,7 +54,7 @@ int main(int argc, char **argv) {
   wb_motor_set_position(D, INFINITY);
   
   double E_speed = 1.0;
-  double D_speed = 10.0;
+  double D_speed = 1.0;
   double s0_value = 0;
   double s1_value = 0;
   double s2_value = 0;
@@ -84,10 +84,42 @@ int main(int argc, char **argv) {
   s6_value = wb_distance_sensor_get_value(s6);
   s7_value = wb_distance_sensor_get_value(s7);
   
-  printf("oi\n");
-  
   wb_motor_set_velocity(E,E_speed);
   wb_motor_set_velocity(D,D_speed);
+  
+  
+  if(s7_value >= 65){
+  D_speed = 0;
+  E_speed = 6;
+  }
+  else if(s6_value >= 65){
+  D_speed = 3;
+  E_speed = 5;
+  }
+  else if(s0_value >= 65){
+  E_speed = 0;
+  D_speed = 6;
+  }
+  else if(s1_value >= 65){
+  E_speed = 3;
+  D_speed = 5;
+  }
+  else if(s5_value >= 65){
+  D_speed = 4;
+  E_speed = 5;
+  }
+  else if(s2_value >= 65){
+  E_speed = 4;
+  D_speed = 5;
+  }
+  else{
+  E_speed = 6;
+  D_speed = 6;
+  }
+  wb_motor_set_velocity(E,E_speed);
+  wb_motor_set_velocity(D,D_speed);
+  printf("roda esquerda %f\nroda direita %f\n", E_speed,D_speed);
+
     /*
      * Read the sensors :
      * Enter here functions to read sensor data, like:
