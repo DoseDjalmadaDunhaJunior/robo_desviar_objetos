@@ -53,8 +53,9 @@ int main(int argc, char **argv) {
   wb_motor_set_position(E, INFINITY);
   wb_motor_set_position(D, INFINITY);
   
-  double E_speed = 1.0;
-  double D_speed = 1.0;
+  double E_speed = 6.0;
+  double D_speed = 6.0;
+  
   double s0_value = 0;
   double s1_value = 0;
   double s2_value = 0;
@@ -62,6 +63,7 @@ int main(int argc, char **argv) {
   double s4_value = 0;
   double s5_value = 0;
   double s6_value = 0;
+  
   double s7_value = 0;
   /*
    * You should declare here WbDeviceTag variables for storing
@@ -82,12 +84,13 @@ int main(int argc, char **argv) {
   s4_value = wb_distance_sensor_get_value(s4);
   s5_value = wb_distance_sensor_get_value(s5);
   s6_value = wb_distance_sensor_get_value(s6);
+  
   s7_value = wb_distance_sensor_get_value(s7);
   
   wb_motor_set_velocity(E,E_speed);
   wb_motor_set_velocity(D,D_speed);
   
-  
+  /*
   if(s7_value >= 65){
   D_speed = 0;
   E_speed = 6;
@@ -116,6 +119,65 @@ int main(int argc, char **argv) {
   E_speed = 6;
   D_speed = 6;
   }
+  */
+  int i = 0;
+  
+  if(s7_value >= 50 && s8_value >= 50){
+      for(i = 0; i < 300; i++){
+      D_speed = 0;
+      E_speed = 6;
+      wb_motor_set_velocity(E,E_speed);
+      wb_motor_set_velocity(D,D_speed);
+      printf("roda esquerda %f\nroda direita %f\n", E_speed,D_speed);
+
+  }
+  }
+  else if(s7_value >= 80){
+    for(i = 0; i < 150; i++){
+      D_speed = 0;
+      E_speed = 6;
+      wb_motor_set_velocity(E,E_speed);
+      wb_motor_set_velocity(D,D_speed);
+      printf("roda esquerda %f\nroda direita %f\n", E_speed,D_speed);
+
+  }
+  }
+  
+  else if(s1_value >= 80){
+  for(i = 0; i < 100; i++){
+      E_speed = 0;
+      D_speed = 6;
+      wb_motor_set_velocity(E,E_speed);
+      wb_motor_set_velocity(D,D_speed);
+      printf("roda esquerda %f\nroda direita %f\n", E_speed,D_speed);
+
+  }
+  }
+  else if(s0_value >= 80){
+    for(i = 0; i < 150; i++){
+      E_speed = 0;
+      D_speed = 6;
+      wb_motor_set_velocity(E,E_speed);
+      wb_motor_set_velocity(D,D_speed);
+      printf("roda esquerda %f\nroda direita %f\n", E_speed,D_speed);
+
+  }
+  }
+  
+  else if(s6_value >= 80){
+  for(i = 0; i < 100; i++){
+      D_speed = 0;
+      E_speed = 6;
+      wb_motor_set_velocity(E,E_speed);
+      wb_motor_set_velocity(D,D_speed);
+      printf("roda esquerda %f\nroda direita %f\n", E_speed,D_speed);
+
+  }
+  }
+  else{
+  E_speed = 6;
+  D_speed = 6;
+   }
   wb_motor_set_velocity(E,E_speed);
   wb_motor_set_velocity(D,D_speed);
   printf("roda esquerda %f\nroda direita %f\n", E_speed,D_speed);
