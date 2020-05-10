@@ -2,8 +2,8 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.07527814836847677 0.7000698409458396 0.7100953585091796 2.9848544254981872
-  position -0.2768229109844432 2.037848189322615 -0.06715532589613074
+  orientation 0.24338930297639008 0.7686461910146963 0.5915612227278475 3.7439065051341336
+  position -1.1159839773829043 3.388289950204451 -1.4840190572450305
 }
 TexturedBackground {
 }
@@ -21,11 +21,6 @@ SolidBox {
 SolidBox {
   translation 0.4 0.25 0.36
   name "box(4)"
-  size 0.5 0.5 0.5
-}
-SolidBox {
-  translation -0.12 0.25 0.36
-  name "box(5)"
   size 0.5 0.5 0.5
 }
 SolidBox {
@@ -49,8 +44,43 @@ SolidBox {
   size 0.5 0.5 0.5
 }
 SolidBox {
-  translation 0.4 0.25 -1.36
+  translation 0.4 0.25 0.85
   name "box(2)"
+  size 0.5 0.5 0.5
+}
+SolidBox {
+  translation 0.41 0.25 1.36
+  name "box(5)"
+  size 0.5 0.5 0.5
+}
+SolidBox {
+  translation -0.07 0.25 1.36
+  name "box(9)"
+  size 0.5 0.5 0.5
+}
+SolidBox {
+  translation -0.58 0.25 1.36
+  name "box(10)"
+  size 0.5 0.5 0.5
+}
+SolidBox {
+  translation -1.09 0.25 1.36
+  name "box(11)"
+  size 0.5 0.5 0.5
+}
+SolidBox {
+  translation -1.56 0.25 1.36
+  name "box(12)"
+  size 0.5 0.5 0.5
+}
+SolidBox {
+  translation -1.56 0.25 0.85
+  name "box(13)"
+  size 0.5 0.5 0.5
+}
+SolidBox {
+  translation -1.56 0.25 0.37
+  name "box(14)"
   size 0.5 0.5 0.5
 }
 SolidBox {
@@ -59,7 +89,17 @@ SolidBox {
   size 0.5 0.5 0.5
 }
 E-puck {
-  translation -0.4305825716481109 -0.00010232200255937823 -0.19927453496389563
-  rotation 0.0002393680752890583 0.9999993145323645 -0.0011461403604984847 -1.5500653071795858
+  hidden position_0_0 302.7595707021779
+  hidden position_0_1 277.44933920746263
+  hidden linearVelocity_0 0.10715352547293062 -9.921789446001618e-05 -0.034659378834842075
+  hidden angularVelocity_0 0.1441019357056186 0.008572969822753355 0.461297412005106
+  hidden rotation_1 -0.9999999999999999 0 0 1.166675957557731
+  hidden linearVelocity_1 0.10507144216560019 -5.196978021899639e-05 -0.03372396732503087
+  hidden angularVelocity_1 -1.6867093186593656 -0.024407428300671663 -5.252543387142135
+  hidden rotation_2 -1 0 0 0.9891856915608236
+  hidden linearVelocity_2 0.1049502613130504 -1.3936440312889594e-05 -0.034248875433655256
+  hidden angularVelocity_2 -1.7013807714740894 0.001200381693931529 -5.247830338639645
+  translation -0.1985056144041062 -9.849575526535946e-05 -1.5954480285128727
+  rotation -0.00746050116680214 0.9999492247410916 -0.0067741318285041 -1.2578833268068053
   controller "controlador1"
 }

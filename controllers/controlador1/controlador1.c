@@ -122,7 +122,7 @@ int main(int argc, char **argv) {
   */
   int i = 0;
   
-  if(s7_value >= 50 && s8_value >= 50){
+  if(s7_value >= 70 && s0_value >= 70){
       for(i = 0; i < 300; i++){
       D_speed = 0;
       E_speed = 6;
